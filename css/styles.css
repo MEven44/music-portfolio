@@ -84,7 +84,37 @@
 *::after {
   box-sizing: border-box;
 }
+/* Responsive container for Instagram embeds */
+.responsive-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
 
+.responsive-embed iframe,
+.responsive-embed blockquote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-embed-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .responsive-embed-wrapper .responsive-embed {
+    padding-bottom: 0;
+    aspect-ratio: 16 / 9;
+    height: 100%;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -148,6 +178,44 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: calc(1.275rem + 0.3vw);
+}
+/* Responsive video container */
+.responsive-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Stretch both columns and improve height on desktop */
+.responsive-video-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .responsive-video-wrapper .responsive-video {
+    height: 100%;
+    padding-bottom: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .responsive-video-wrapper iframe {
+    height: 100%;
+  }
+}
 }
 @media (min-width: 1200px) {
   h4, .h4 {
