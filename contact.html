@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content />
         <meta name="author" content />
-        <title>Modern Business - Start Bootstrap Template</title>
+        <title>Moran - Pianist & Compose</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
         <!-- Custom Google font-->
@@ -46,14 +46,8 @@
                         </div>
                         <div class="row gx-5 justify-content-center">
                             <div class="col-lg-8 col-xl-6">
-                                <!-- * * * * * * * * * * * * * * *-->
-                                <!-- * * SB Forms Contact Form * *-->
-                                <!-- * * * * * * * * * * * * * * *-->
-                                <!-- This form is pre-integrated with SB Forms.-->
-                                <!-- To make this form functional, sign up at-->
-                                <!-- https://startbootstrap.com/solution/contact-forms-->
-                                <!-- to get an API token!-->
-                                <form id="contactForm" action="send_mail.php" method="post">
+                               
+                                <form id="contactForm" action="https://formspree.io/f/xanqdobk" method="POST">
                                     <!-- Name input-->
                                     <div class="form-floating mb-3">
                                         <input class="form-control" id="name" type="text" name="name" placeholder="Enter your name..." required/>
@@ -81,46 +75,9 @@
                                     <!-- Submit Button-->
                                     <div class="d-grid"><button class="btn btn-primary" id="submit-btn" type="submit">Submit</button></div>
                                     <p id="status-message" style="display:none;"></p>
-
+                                 </div>
                                 </form>
-                                 <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            let formData = new FormData(this);
-            let submitButton = document.getElementById('submit-btn');
-            let statusMessage = document.getElementById('status-message');
-
-            // Disable the button and change text while processing
-            submitButton.disabled = true;
-            submitButton.textContent = "Sending...";
-
-            fetch('send_mail.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                statusMessage.style.display = 'block';
-                if (data.includes("successfully")) {
-                    statusMessage.style.color = 'green';
-                    statusMessage.textContent = "Message sent successfully!";
-                } else {
-                    statusMessage.style.color = 'red';
-                    statusMessage.textContent = "Error sending message.";
-                }
-                submitButton.disabled = false;
-                submitButton.textContent = "Send";
-            })
-            .catch(error => {
-                statusMessage.style.display = 'block';
-                statusMessage.style.color = 'red';
-                statusMessage.textContent = "An error occurred.";
-                submitButton.disabled = false;
-                submitButton.textContent = "Send";
-            });
-        });
-    </script>
+                                 
                             </div>
                         </div>
                     </div>
