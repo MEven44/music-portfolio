@@ -1,0 +1,229 @@
+/* COLOR PALETTE & RESET */
+:root {
+    --bg-dark: #121212;
+    --card-dark: #1e1e1e;
+    --text-light: #ffffff;
+    --text-muted: #cccccc;
+    --accent-pink: #f4a5c0; /* Pink matching your business card */
+    --accent-pink-hover: #e382a4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.site-wrapper {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--accent-pink);
+    letter-spacing: 1px;
+}
+
+.nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: var(--accent-pink);
+}
+
+/* HEADLINE */
+.hero-headline {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.hero-headline h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--accent-pink);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* MAIN LAYOUT GRID */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* LEFT COLUMN */
+.column-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo-card img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    max-height: 380px;
+}
+
+/* VIDEO EMBED CONTAINER */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* RIGHT COLUMN */
+.column-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--card-dark);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.about-section h2, .repertoire-section h3, .clips-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent-pink);
+    margin-bottom: 10px;
+}
+
+.rep-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.rep-grid strong {
+    color: var(--text-light);
+}
+
+/* PERFORMANCE CLIPS */
+.clips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.clip-card {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.small-video {
+    margin-bottom: 5px;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #000;
+    border-radius: 12px;
+    gap: 15px;
+}
+
+.contact-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+}
+
+.contact-info a {
+    color: var(--accent-pink);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.quick-inquiry {
+    display: flex;
+    gap: 10px;
+}
+
+.quick-inquiry input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+.quick-inquiry button {
+    background: var(--accent-pink);
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quick-inquiry button:hover {
+    background: var(--accent-pink-hover);
+}
+
+/* RESPONSIVE (MOBILE) ADJUSTMENTS */
+@media (max-width: 850px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .clips-grid {
+        grid-template-columns: 1fr;
+    }
+}
