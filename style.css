@@ -6,6 +6,8 @@
     --text-muted: #cccccc;
     --accent-pink: #f4a5c0; /* Pink matching your business card */
     --accent-pink-hover: #e382a4;
+    --accent-gold: #d4af37;
+    --accent-gold-hover: #e5be48;
 }
 
 * {
@@ -187,31 +189,54 @@ body {
     text-decoration: underline;
 }
 
+/* QUICK INQUIRY FORM */
 .quick-inquiry {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
-.quick-inquiry input {
-    padding: 8px 12px;
+.quick-inquiry input[type="email"] {
+    padding: 12px 16px;
+    border: 1px solid #333;
+    background: #121212;
+    color: #fff;
     border-radius: 6px;
-    border: none;
+    font-size: 0.95rem;
     outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quick-inquiry input[type="email"]:focus {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
 }
 
 .quick-inquiry button {
-    background: var(--accent-pink);
-    color: #000;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
+    background: linear-gradient(135deg, #d4af37, #b38b2d);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.2s;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .quick-inquiry button:hover {
-    background: var(--accent-pink-hover);
+    background: linear-gradient(135deg, #e5be48, #c49a38);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.45);
+}
+
+.quick-inquiry button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
 }
 
 /* RESPONSIVE (MOBILE) ADJUSTMENTS */
@@ -222,6 +247,14 @@ body {
     .footer {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .quick-inquiry {
+        width: 100%;
+        flex-direction: column;
+    }
+    .quick-inquiry input[type="email"],
+    .quick-inquiry button {
+        width: 100%;
     }
     .clips-grid {
         grid-template-columns: 1fr;
