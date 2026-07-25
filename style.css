@@ -604,4 +604,34 @@ body {
     .header-inner {
         text-align: center;
     }
+    /* TRUST BANNER / DISCOVERY CALL SECTION */
+.trust-banner {
+    background-color: #fdf8f9; /* Soft pink-tinted white background */
+    border-top: 1px solid #f3d5dc;
+    border-bottom: 1px solid #f3d5dc;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.trust-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.trust-banner h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #2c2c2c;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+.trust-banner p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555555;
+    margin: 0;
+}
 }
