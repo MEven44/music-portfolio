@@ -1,13 +1,13 @@
-/* COLOR PALETTE & RESET */
+/* COLOR PALETTE & GLOBAL RESET */
 :root {
-    --bg-dark: #121212;
-    --card-dark: #1e1e1e;
+    --bg-dark: #0e0e0e;
+    --card-dark: #181818;
+    --card-border: #2a2a2a;
     --text-light: #ffffff;
-    --text-muted: #cccccc;
-    --accent-pink: #f4a5c0; /* Pink matching your business card */
-    --accent-pink-hover: #e382a4;
+    --text-muted: #b3b3b3;
     --accent-gold: #d4af37;
     --accent-gold-hover: #e5be48;
+    --accent-pink: #f4a5c0;
 }
 
 * {
@@ -16,14 +16,18 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-light);
     font-family: 'Open Sans', sans-serif;
-    line-height: 1.5;
-    padding: 20px;
+    line-height: 1.6;
     display: flex;
     justify-content: center;
+    padding: 0 20px;
 }
 
 .site-wrapper {
@@ -31,60 +35,159 @@ body {
     width: 100%;
 }
 
-/* HEADER */
+/* TYPOGRAPHY HEADINGS */
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.btn-primary {
+    background: linear-gradient(135deg, #d4af37, #b38b2d);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #e5be48, #c49a38);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(212, 175, 55, 0.1);
+    color: #fff;
+}
+
+.btn-header {
+    background: var(--accent-gold);
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-header:hover {
+    background: var(--accent-gold-hover);
+}
+
+/* 1. HEADER */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #333;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--card-border);
 }
 
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 1.5rem;
-    color: var(--accent-pink);
-    letter-spacing: 1px;
+    color: var(--accent-gold);
+    letter-spacing: 1.5px;
 }
 
 .nav a {
     color: var(--text-light);
     text-decoration: none;
-    margin-left: 20px;
+    margin-right: 25px;
     font-weight: 600;
+    font-size: 0.95rem;
     transition: color 0.2s;
 }
 
 .nav a:hover {
-    color: var(--accent-pink);
+    color: var(--accent-gold);
 }
 
-/* HEADLINE */
-.hero-headline {
+/* 2. HERO SECTION */
+.hero-section {
     text-align: center;
-    margin: 25px 0;
+    padding: 70px 20px 50px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.hero-headline h1 {
+.hero-tagline {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 1.6rem;
     color: var(--accent-pink);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 15px;
 }
 
-/* MAIN LAYOUT GRID */
-.main-content {
+.hero-section h1 {
+    font-size: 2.5rem;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+    font-weight: 300;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* 3. ABOUT SECTION */
+.about-section {
+    padding: 50px 0;
+}
+
+.about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    margin-bottom: 30px;
+    gap: 40px;
 }
 
-/* LEFT COLUMN */
-.column-left {
+.about-visuals {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -95,16 +198,17 @@ body {
     border-radius: 12px;
     object-fit: cover;
     max-height: 380px;
+    border: 1px solid var(--card-border);
 }
 
-/* VIDEO EMBED CONTAINER */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     border-radius: 12px;
     background: #000;
+    border: 1px solid var(--card-border);
 }
 
 .video-container iframe {
@@ -115,148 +219,308 @@ body {
     height: 100%;
 }
 
-/* RIGHT COLUMN */
-.column-right {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.about-text-card {
     background: var(--card-dark);
-    padding: 25px;
+    padding: 35px;
     border-radius: 12px;
+    border: 1px solid var(--card-border);
 }
 
-.about-section h2, .repertoire-section h3, .clips-section h3 {
-    font-family: 'Montserrat', sans-serif;
+.lead-text {
+    font-size: 1.05rem;
     color: var(--accent-pink);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    line-height: 1.7;
 }
 
-.rep-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-size: 0.95rem;
+.about-text-card p {
     color: var(--text-muted);
+    margin-bottom: 15px;
 }
 
-.rep-grid strong {
-    color: var(--text-light);
+/* 4. MEDIA GALLERY */
+.media-section {
+    padding: 60px 0;
+    text-align: center;
 }
 
-/* PERFORMANCE CLIPS */
 .clips-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 10px;
+    gap: 20px;
 }
 
 .clip-card {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-.small-video {
-    margin-bottom: 5px;
-}
-
-/* FOOTER */
-.footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: #000;
+    background: var(--card-dark);
+    padding: 15px;
     border-radius: 12px;
-    gap: 15px;
+    border: 1px solid var(--card-border);
 }
 
-.contact-info {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.clip-card h4 {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+/* 5. MID-PAGE CTA BANNER */
+.mid-cta-banner {
+    background: linear-gradient(180deg, #181818 0%, #121212 100%);
+    border: 1px solid var(--accent-gold);
+    border-radius: 12px;
+    padding: 50px 30px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.banner-content h3 {
+    font-size: 1.8rem;
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.banner-content p {
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 25px;
+    font-size: 1.05rem;
+}
+
+/* 6. REPERTOIRE SECTION */
+.repertoire-section {
+    padding: 60px 0;
+}
+
+.setlist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.setlist-category {
+    background: var(--card-dark);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+}
+
+.setlist-category h3 {
+    font-size: 1.15rem;
+    color: var(--accent-pink);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 8px;
+}
+
+.setlist-category ul {
+    list-style: none;
+}
+
+.setlist-category li {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    color: var(--text-light);
+}
+
+.setlist-category li span {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* 7. BOOKING PROCESS */
+.process-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.step-card {
+    background: var(--card-dark);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+    text-align: left;
+    position: relative;
+}
+
+.step-num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-gold);
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
+.step-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+
+.step-card p {
+    color: var(--text-muted);
     font-size: 0.9rem;
 }
 
-.contact-info a {
+/* 8. FAQ SECTION */
+.faq-section {
+    padding: 60px 0;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.faq-item {
+    background: var(--card-dark);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+}
+
+.faq-item h4 {
+    color: var(--accent-gold);
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* 9. FOOTER & INQUIRY FORM */
+.footer {
+    background: #000;
+    border-top: 1px solid var(--card-border);
+    padding: 60px 40px 20px;
+    border-radius: 16px 16px 0 0;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-info h2 {
+    color: var(--accent-gold);
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.contact-links p {
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+.contact-links a {
     color: var(--accent-pink);
     text-decoration: none;
 }
 
-.contact-info a:hover {
+.contact-links a:hover {
     text-decoration: underline;
 }
 
-/* QUICK INQUIRY FORM */
+.footer-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .quick-inquiry {
     display: flex;
     gap: 10px;
-    align-items: center;
 }
 
 .quick-inquiry input[type="email"] {
-    padding: 12px 16px;
-    border: 1px solid #333;
-    background: #121212;
+    flex: 1;
+    padding: 14px 18px;
+    border: 1px solid var(--card-border);
+    background: var(--card-dark);
     color: #fff;
     border-radius: 6px;
     font-size: 0.95rem;
     outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .quick-inquiry input[type="email"]:focus {
     border-color: var(--accent-gold);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
 }
 
 .quick-inquiry button {
     background: linear-gradient(135deg, #d4af37, #b38b2d);
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 0.95rem;
-    padding: 12px 24px;
+    font-weight: 700;
+    padding: 14px 24px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    letter-spacing: 0.5px;
     white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
 .quick-inquiry button:hover {
     background: linear-gradient(135deg, #e5be48, #c49a38);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.45);
 }
 
-.quick-inquiry button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+.form-status {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
 }
 
-/* RESPONSIVE (MOBILE) ADJUSTMENTS */
-@media (max-width: 850px) {
-    .main-content {
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid var(--card-border);
+    padding-top: 20px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+/* RESPONSIVE MOBILE STYLES */
+@media (max-width: 900px) {
+    .about-grid, 
+    .clips-grid, 
+    .setlist-grid, 
+    .process-steps, 
+    .faq-grid, 
+    .footer-container {
         grid-template-columns: 1fr;
     }
-    .footer {
-        flex-direction: column;
-        align-items: flex-start;
+
+    .hero-section h1 {
+        font-size: 1.8rem;
     }
+
+    .hero-cta-group {
+        flex-direction: column;
+    }
+
+    .nav {
+        display: none; /* Can be expanded to hamburger menu */
+    }
+
     .quick-inquiry {
-        width: 100%;
         flex-direction: column;
-    }
-    .quick-inquiry input[type="email"],
-    .quick-inquiry button {
-        width: 100%;
-    }
-    .clips-grid {
-        grid-template-columns: 1fr;
     }
 }
