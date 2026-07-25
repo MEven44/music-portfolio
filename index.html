@@ -3,131 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moran Even — Pianist for Corporate Events, Galas & Receptions</title>
+    <title>Moran Even — Live Piano for Corporate Galas, Receptions & Private Events</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Font for sleek typography -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="site-wrapper">
-        <!-- HEADER / NAVIGATION -->
+
+        <!-- 1. HEADER / NAVIGATION -->
         <header class="header">
             <div class="logo">MORAN EVEN</div>
             <nav class="nav">
                 <a href="#about">About</a>
-                <a href="#media">Media</a>
-                <a href="#contact">Contact</a>
+                <a href="#media">Performances</a>
+                <a href="#repertoire">Repertoire</a>
+                <a href="#process">Booking Process</a>
+                <a href="#faq">FAQ</a>
             </nav>
+            <a href="#contact" class="btn-header">Check Availability</a>
         </header>
 
-        <!-- MAIN HEADLINE -->
-        <section class="hero-headline">
-            <h1>MORAN EVEN — PIANIST FOR CORPORATE EVENTS, GALAS, RECEPTIONS & COCKTAIL PARTIES</h1>
+        <!-- 2. HERO SECTION -->
+        <section class="hero-section">
+            <span class="hero-tagline">BEAUTIFUL LIVE MUSIC FOR UNFORGETTABLE EVENTS</span>
+            <h1>ELEVATE YOUR EVENT WITH SOPHISTICATED LIVE PIANO</h1>
+            <p class="hero-subtitle">
+                Tailored musical atmospheres for corporate galas, VIP receptions, and luxury private events across Northern California.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#contact" class="btn-primary">Inquire For Your Event</a>
+                <a href="#media" class="btn-secondary">Watch Performance Clips</a>
+            </div>
         </section>
 
-        <!-- MAIN CONTENT CONTAINER (ONE-SCREEN GRID) -->
-        <main class="main-content">
-            
-            <!-- LEFT COLUMN: PHOTO & INTRO VIDEO -->
-            <div class="column-left">
-                <!-- HERO IMAGE -->
-                <div class="photo-card">
-                    <!-- REPLACE 'your-photo.jpg' with your photo file in your GitHub repo -->
-                    <img src="your-photo.jpg" alt="Moran Even playing piano">
-                </div>
-
-                <!-- MAIN INTRO VIDEO -->
-                <div class="video-container main-video">
-                    <!-- PASTE YOUR EMBEDDED YOUTUBE/VIMEO LINK HERE IN THE 'src' -->
-                    <iframe src="https://www.youtube.com/embed/5414eZFTXcI" 
-                            title="Moran Even Introduction Video" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-
-            <!-- RIGHT COLUMN: ABOUT, REPERTOIRE & MEDIA CLIPS -->
-            <div class="column-right">
+        <!-- 3. MAIN INTRO & ABOUT SECTION -->
+        <section id="about" class="about-section">
+            <div class="about-grid">
                 
-                <section id="about" class="about-section">
-                    <h2>About</h2>
-                    <p>
-                        For over six years, Moran Even has brought dynamic piano performances to life across Northern California—from intimate cocktail hours and high-profile corporate galas to theatrical pit orchestras for productions like <em>Cinderella</em> and <em>The Wizard of Oz</em>. Known for his rich jazz arrangements, Latin bossa nova grooves, and iconic pop hits, Moran seamlessly adapts to any event's atmosphere. Whether leading energetic open mics or setting an elegant backdrop for art openings, his playing delivers an unforgettable musical experience tailored to your guests.
+                <!-- Left Column: Primary Visuals -->
+                <div class="about-visuals">
+                    <div class="photo-card">
+                        <img src="your-photo.jpg" alt="Moran Even playing piano at an event">
+                    </div>
+                    <div class="video-container main-video">
+                        <iframe src="https://www.youtube.com/embed/5414eZFTXcI" 
+                                title="Moran Even Introduction Video" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Right Column: Narrative Copy -->
+                <div class="about-text-card">
+                    <h2>Thoughtful, Effortless Atmosphere</h2>
+                    <p class="lead-text">
+                        <em>"There are so many details that go into making an event feel truly special, and live music is one of the easiest ways to make it memorable. I love tailoring the music to each event so it speaks directly to your guests and elevates the energy of the room."</em>
                     </p>
-                </section>
+                    <p>
+                        When you’re planning a premier event, every detail should feel intentional. Moran Even brings more than vibrant piano artistry—he brings years of experience performing across Northern California, Israel, and Europe for high-profile corporate clients, non-profit galas, and theatrical pit orchestras (such as <em>Cinderella</em> and <em>The Wizard of Oz</em>).
+                    </p>
+                    <p>
+                        Playing music since age 4 and jazz piano since age 8, Moran has used music as a vehicle for storytelling, performance, and audience connection. From the first conversation, Moran is attentive, organized, and seamless to work with. He customizes his setlist to match your exact vision so you can focus entirely on your guests.
+                    </p>
+                </div>
 
-                <section class="repertoire-section">
-                    <h3>Repertoire Highlights</h3>
-                    <div class="rep-grid">
-                        <div>
-                            <strong>Jazz & Bossa Nova:</strong>
-                            <p>A Night in Tunisia • All of Me • Chega de Saudade • Wave • Four • Fly Me to the Moon</p>
-                        </div>
-                        <div>
-                            <strong>Pop & Broadway:</strong>
-                            <p>New York State of Mind • Your Song • You Are the Sunshine of My Life • Cabaret</p>
-                        </div>
-                    </div>
-                </section>
+            </div>
+        </section>
 
-                <section id="media" class="clips-section">
-                    <h3>Performance Clips</h3>
-                    <div class="clips-grid">
+        <!-- 4. MEDIA PERFORMANCE GALLERY -->
+        <section id="media" class="media-section">
+            <h2>Performance Highlights</h2>
                         
-                        <!-- SAMPLE CLIP 1 -->
-                        <div class="clip-card">
-                            <div class="video-container small-video">
-                                <!-- PASTE SHORT CLIP 1 LINK HERE -->
-                                <iframe src="https://www.youtube.com/embed/ZagVGWBEktg?si=n6C3LVPeU3pAQa_D" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <span>Jazz</span>
-                        </div>
-
-                        <!-- SAMPLE CLIP 2 -->
-                        <div class="clip-card">
-                            <div class="video-container small-video">
-                                <!-- PASTE SHORT CLIP 2 LINK HERE -->
-                                <iframe src="https://www.youtube.com/embed/6g7Gyoasxeg?si=o_ghtkwAx5KjreSN" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <span>Sappho  - play with music</span>
-                        </div>
-
-                        <!-- SAMPLE CLIP 3 -->
-                        <div class="clip-card">
-                            <div class="video-container small-video">
-                                <!-- PASTE SHORT CLIP 3 LINK HERE -->
-                                <iframe src="https://www.youtube.com/embed/3fL3yWvPgeM?si=SwyCFTt0-J4nqZYC" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <span>Reception</span>
-                        </div>
-
+            <div class="clips-grid">
+                <div class="clip-card">
+                    <div class="video-container small-video">
+                        <iframe src="https://www.youtube.com/embed/ZagVGWBEktg" frameborder="0" allowfullscreen></iframe>
                     </div>
-                </section>
+                    <h4>Jazz Standards & Elegance</h4>
+                </div>
+
+                <div class="clip-card">
+                    <div class="video-container small-video">
+                        <iframe src="https://www.youtube.com/embed/6g7Gyoasxeg" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h4>Theatrical & Dramatic Performances</h4>
+                </div>
+
+                <div class="clip-card">
+                    <div class="video-container small-video">
+                        <iframe src="https://www.youtube.com/embed/lTgjRFf0RSo" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <h4>Bossa Nova & Latin Grooves</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. MID-PAGE CTA BANNER -->
+        <section class="mid-cta-banner">
+            <div class="banner-content">
+                <h3>Planning a Specific Theme or Custom Request?</h3>
+                <p>Moran offers custom arrangement services, including custom song lyrics written specifically for your event host, guest of honor, or corporate milestone.</p>
+                <a href="#contact" class="btn-primary">Schedule a Music Consultation</a>
+            </div>
+        </section>
+
+        <!-- 6. SAMPLE REPERTOIRE SECTION -->
+        <section id="repertoire" class="repertoire-section">
+            <h2>Curated Repertoire Highlights</h2>
+            <p class="section-subtitle">This sample setlist represents just a fraction of Moran's repertoire. Song selections are fully customized to match your event's exact aesthetic.</p>
+
+            <div class="setlist-grid">
+                <div class="setlist-category">
+                    <h3>Jazz & Great American Songbook</h3>
+                    <ul>
+                        <li><strong>All of Me</strong> — <span>Gerald Marks & Seymour Simons</span></li>
+                        <li><strong>A Night in Tunisia</strong> — <span>Dizzy Gillespie</span></li>
+                        <li><strong>Chega de Saudade (No More Blues)</strong> — <span>Antônio Carlos Jobim</span></li>
+                        <li><strong>How Insensitive</strong> — <span>Antônio Carlos Jobim</span></li>
+                    </ul>
+                </div>
+
+                <div class="setlist-category">
+                    <h3>Pop & Modern Classics</h3>
+                    <ul>
+                        <li><strong>Your Song</strong> — <span>Elton John</span></li>
+                        <li><strong>Tiny Dancer</strong> — <span>Elton John</span></li>
+                        <li><strong>New York State of Mind</strong> — <span>Billy Joel</span></li>
+                        <li><strong>You Are the Sunshine of My Life</strong> — <span>Stevie Wonder</span></li>
+                        <li><strong>Hallelujah</strong> — <span>Leonard Cohen</span></li>
+                    </ul>
+                </div>
+
+                <div class="setlist-category">
+                    <h3>Broadway, Film & Showtunes</h3>
+                    <ul>
+                        <li><strong>Cabaret</strong> — <span>John Kander & Fred Ebb</span></li>
+                        <li><strong>Mein Herr / Only This Time</strong> — <span>John Kander & Fred Ebb</span></li>
+                        <li><strong>Anything Goes</strong> — <span>Cole Porter</span></li>
+                        <li><strong>Hakuna Matata</strong> — <span>Elton John & Tim Rice</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. BOOKING PROCESS -->
+        <section id="process" class="process-section">
+            <h2>Friction-Free Booking Process</h2>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3>Initial Inquiry</h3>
+                    <p>Reach out via phone, email, or form. Share your event date, location, and overall vision.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3>Music Consultation</h3>
+                    <p>We’ll discuss repertoire preferences, timeline flow, sound requirements, and any special requests.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3>Secure the Date</h3>
+                    <p>Lock in your date with a simple agreement and deposit. Moran handles all technical preparation from there.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FREQUENTLY ASKED QUESTIONS -->
+        <section id="faq" class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                
+                <div class="faq-item">
+                    <h4>What style of music can we expect at our event?</h4>
+                    <p>I curate a balance of sophisticated Jazz standards, Latin bossa nova, timeless pop, and Broadway arrangements. The set is carefully structured to enhance conversation and atmosphere without ever overpowering your guests.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>How long do you typically perform?</h4>
+                    <p>Most engagements range from 1 to 3 hours, covering cocktail hours, formal dinners, or guest arrivals. I can also compose a custom tailored song with personalized lyrics for your company or guest of honor upon request.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Do you bring your own sound equipment?</h4>
+                    <p>Yes. I perform on a premium professional digital piano and provide a high-end personal PA system. I arrive 90 minutes early to conduct sound checks. (If your venue has an acoustic grand piano, I am delighted to perform on it as well).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>What is required to secure our event date?</h4>
+                    <p>A signed agreement and a booking retainer reserve your date exclusively. The remaining balance is due one week prior to the event, ensuring full focus on delivering an exceptional performance on your big day.</p>
+                </div>
 
             </div>
-        </main>
+        </section>
 
-        <!-- FOOTER / CONTACT BAR -->
+        <!-- 9. FOOTER & CONTACT FORM -->
         <footer id="contact" class="footer">
-            <div class="contact-info">
-                <span>📞 <a href="tel:5304460919">(530) 446-0919</a></span>
-                <span>✉️ <a href="mailto:method.even@gmail.com">method.even@gmail.com</a></span>
-                <span>🌐 <a href="https://moranpiano.com" target="_blank">moranpiano.com</a></span>
-                <span>📸 <a href="https://instagram.com/rocketmankeys1" target="_blank">@rocketmankeys1</a></span>
-            </div>
+            <div class="footer-container">
+                
+                <div class="footer-info">
+                    <h2>Inquire For Your Event</h2>
+                    <p>Now accepting bookings for corporate events, galas, luxury receptions, and private engagements across Northern California and select travel locations.</p>
+                    
+                    <div class="contact-links">
+                        <p><strong>Direct Line:</strong> <a href="tel:5304460919">(530) 446-0919</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:method.even@gmail.com">method.even@gmail.com</a></p>
+                        <p><strong>Website:</strong> <a href="https://moranpiano.com" target="_blank">moranpiano.com</a></p>
+                        <p><strong>Instagram:</strong> <a href="https://instagram.com/rocketmankeys1" target="_blank">@rocketmankeys1</a></p>
+                    </div>
+                </div>
 
-            <!-- INQUIRY FORM (Drop Formspree Endpoint in 'action') -->
-            <form class="quick-inquiry" action="https://formspree.io/f/mjgnaopw" method="POST" target="_blank">
-                <input type="email" name="email" placeholder="Enter your email..." required>
-                <button type="submit">Inquire Now</button>
-            </form>
+                <div class="footer-form-wrapper">
+                    <form id="inquiry-form" class="quick-inquiry" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <input type="email" name="email" placeholder="Enter your email to request pricing & availability..." required>
+                        <button type="submit" id="submit-btn">Check Availability →</button>
+                    </form>
+                    <p id="form-status" class="form-status"></p>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Moran Even. All rights reserved.</p>
+            </div>
         </footer>
+
     </div>
+
+    <!-- SILENT AJAX FORM SUBMISSION SCRIPT -->
+    <script>
+      const form = document.getElementById("inquiry-form");
+      const status = document.getElementById("form-status");
+      const submitBtn = document.getElementById("submit-btn");
+
+      form.addEventListener("submit", async function(event) {
+        event.preventDefault();
+        
+        submitBtn.innerText = "Sending...";
+        submitBtn.disabled = true;
+
+        const data = new FormData(event.target);
+        
+        try {
+          const response = await fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (response.ok) {
+            status.innerHTML = "✨ Request sent! Moran will get back to you shortly.";
+            status.style.color = "#d4af37";
+            form.reset();
+            form.style.display = "none";
+          } else {
+            status.innerHTML = "Oops! Please check your Formspree ID or try again.";
+            status.style.color = "#ff6b6b";
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Check Availability →";
+          }
+        } catch (error) {
+          status.innerHTML = "Oops! Something went wrong. Please try again.";
+          status.style.color = "#ff6b6b";
+          submitBtn.disabled = false;
+          submitBtn.innerText = "Check Availability →";
+        }
+      });
+    </script>
 
 </body>
 </html>
